@@ -1,0 +1,396 @@
+/* 🌈 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🌙 Dark Theme */
+body {
+  background: #0f1117;
+  color: white;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #111827;
+  padding: 20px;
+  border-right: 1px solid #222;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.menu-item {
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background: #1f2937;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topbar */
+.topbar {
+  height: 60px;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #222;
+}
+
+.search {
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #1f2937;
+  color: white;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 20px;
+}
+
+/* Folder row */
+.folder-row {
+  display: flex;
+  gap: 15px;
+}
+
+.folder-card {
+  background: #1f2937;
+  padding: 15px;
+  border-radius: 12px;
+  width: 200px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.folder-card:hover {
+  background: #374151;
+}
+
+/* File table */
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.file-table th,
+.file-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+/* Button */
+.btn {
+  background: #3b82f6;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* ================= AUTH UI (PREMIUM DARK) ================= */
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b0f19;
+}
+
+/* Card */
+.auth-card {
+  width: 360px;
+  padding: 30px 28px;
+  background: #111827;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  text-align: center;
+  border: 1px solid #1f2937;
+}
+
+/* Title */
+.auth-card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #1f2937;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  transition: 0.2s;
+}
+
+/* ICON FIX */
+.input-group svg {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Input */
+.input-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  margin-left: 8px;
+  width: 100%;
+}
+
+/* Focus effect */
+.input-group:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+/* Button */
+.auth-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+/* Link */
+.auth-link {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #60a5fa;
+  cursor: pointer;
+}
+
+
+/* FLOATING INPUT */
+.floating-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #1f2937;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #2d3748;
+}
+
+.floating-group input {
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+  width: 100%;
+  padding-left: 8px;
+}
+
+.floating-group label {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #9ca3af;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+/* FLOAT EFFECT */
+.floating-group input:focus + label,
+.floating-group input:not(:placeholder-shown) + label {
+  top: -6px;
+  font-size: 10px;
+  color: #3b82f6;
+  background: #111827;
+  padding: 0 5px;
+}
+
+/* ICON */
+.floating-group svg {
+  color: #9ca3af;
+}
+
+/* EYE */
+.eye {
+  cursor: pointer;
+  color: #9ca3af;
+}
+
+/* REMEMBER */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+
+/* GRID FILES */
+.file-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.file-card {
+  width: 120px;
+  background: #1f2937;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* PREVIEW */
+.preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-modal img {
+  max-width: 70%;
+  border-radius: 10px;
+}
+
+/* DROPZONE */
+.dropzone {
+  border: 2px dashed #3b82f6;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.actions input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #1f2937;
+  color: white;
+}
+
+/* USER */
+.user-section {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropzone.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0b1426;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #111827;
+  color: white;
+}
+
+.preview-body {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-body img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}

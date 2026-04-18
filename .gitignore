@@ -1,0 +1,112 @@
+# =========================
+
+# Node.js / Backend
+
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+
+logs/
+*.log
+
+# Runtime data
+
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory
+
+coverage/
+
+# Build output
+
+dist/
+build/
+
+# =========================
+
+# Frontend (React)
+
+# =========================
+
+frontend/node_modules/
+frontend/build/
+
+# Optional: if frontend has its own .env
+
+frontend/.env
+
+# =========================
+
+# OS & Editor files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# VS Code
+
+.vscode/
+
+# JetBrains
+
+.idea/
+
+# =========================
+
+# Misc
+
+# =========================
+
+*.swp
+*.swo
+*.bak
+
+# =========================
+
+# Uploads (if local storage used)
+
+# =========================
+
+uploads/
+
+# =========================
+
+# Cloudinary temp (optional)
+
+# =========================
+
+tmp/
+
+# =========================
+
+# Testing
+
+# =========================
+
+jest.config.js
+coverage/
+
+# =========================
+
+# TypeScript (if added later)
+
+# =========================
+
+*.tsbuildinfo
