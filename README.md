@@ -4,6 +4,22 @@ DriveNest is a full-stack cloud storage web application inspired by Google Drive
 
 ---
 
+Signup Page -> 
+
+<img width="1919" height="971" alt="image" src="https://github.com/user-attachments/assets/6744290b-5756-45eb-8ea8-551d364f1ac5" />
+
+
+Login Page ->
+<img width="1914" height="971" alt="image" src="https://github.com/user-attachments/assets/f3295b5f-1ce1-45b1-a8c7-c58f58991be6" />
+
+
+Dashboard Page ->
+
+<img width="1917" height="973" alt="image" src="https://github.com/user-attachments/assets/2849e1c9-4cf8-4536-a30e-403b41ecf13b" />
+
+
+
+
 ## 📌 Features
 
 ### 🔐 Authentication
