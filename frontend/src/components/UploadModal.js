@@ -5,25 +5,31 @@ import { toast } from "react-toastify";
 export default function UploadModal({ folderId, refresh }) {
 
   const onDrop = async (acceptedFiles) => {
-    if (!folderId) {
-      return toast.error("Select a folder first ❗");
-    }
+  if (!folderId) {
+    return toast.error("Select a folder first ❗");
+  }
 
-    try {
-      const formData = new FormData();
-      formData.append("image", acceptedFiles[0]);
-      formData.append("folder", folderId);
+  try {
+    const formData = new FormData();
 
-      await API.post("/files/upload", formData); 
+    // 🔥 FIX (KEY NAME MUST MATCH)
+    formData.append("file", acceptedFiles[0]); 
+    formData.append("folder", folderId);
 
-      toast.success("File uploaded ✅");
-      refresh();
+    await API.post("/files/upload", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
 
-    } catch (err) {
-      console.error("UPLOAD ERROR:", err.response?.data || err.message);
-      toast.error(err.response?.data?.message || "Upload failed ❌");
-    }
-  };
+    toast.success("File uploaded ✅");
+    refresh();
+
+  } catch (err) {
+    console.error("UPLOAD ERROR:", err.response?.data || err.message);
+    toast.error(err.response?.data?.message || "Upload failed ❌");
+  }
+};
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
